@@ -138,13 +138,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               title: const Text('Latest Uri (query parameters)'),
               children: queryParams == null
                   ? const [ListTile(dense: true, title: Text('null'))]
-                  : [
-                      for (final item in queryParams)
-                        ListTile(
-                          title: Text(item.key),
-                          trailing: Text(item.value.join(', ')),
-                        )
-                    ],
+                  : [],
             ),
           ],
           _cmdsCard(_cmds),
